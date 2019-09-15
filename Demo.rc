@@ -1,0 +1,242 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(简体，中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\Demo.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\Demo.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 Demo"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "Demo 1.0 版",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "版权所有 (C) 2013",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_DEMO_DIALOG DIALOGEX 0, 0, 837, 474
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Demo"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_IMAGE0,"Static",SS_BLACKFRAME,7,7,297,412
+    CONTROL         "",IDC_IMAGE1,"Static",SS_BLACKFRAME,332,7,297,412
+    COMBOBOX        IDC_CAMERA0,638,17,70,30,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_RESOLUTION0,725,17,67,84,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_CAMERA1,639,52,69,30,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_RESOLUTION1,727,52,63,66,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Camera 0",IDC_RADIOCAMERA0,"Button",BS_AUTORADIOBUTTON | WS_GROUP,645,87,48,10
+    CONTROL         "Camera 1",IDC_RADIOCAMERA1,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,724,86,48,10
+    PUSHBUTTON      "H Flip",IDC_FLIPX,638,123,50,14
+    PUSHBUTTON      "V Flip",IDC_FLIPY,699,123,50,14
+    PUSHBUTTON      "Play",IDC_PLAY,638,104,50,14
+    PUSHBUTTON      "Stop",IDC_STOP,699,105,50,14
+    GROUPBOX        "Camera Type",IDC_STATIC,636,73,152,29,WS_GROUP
+    GROUPBOX        "ROI",IDC_STATIC,637,147,160,126
+    EDITTEXT        IDC_ROIOFFSETX,707,165,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ROIOFFSETY,707,187,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ROIWIDTH,707,208,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ROIHEIGHT,707,227,40,14,ES_AUTOHSCROLL
+    LTEXT           "Row Start",IDC_STATIC,647,169,37,8
+    LTEXT           "Column Start",IDC_STATIC,647,193,49,8
+    LTEXT           "Width",IDC_STATIC,656,214,21,8
+    LTEXT           "Height",IDC_STATIC,656,231,25,8
+    PUSHBUTTON      "Apply",IDC_ROIAPPLY,697,250,50,14
+    GROUPBOX        "Save Parameter",IDC_STATIC,641,417,156,40,WS_GROUP
+    CONTROL         "Group 0",IDC_GROUP0,"Button",BS_AUTORADIOBUTTON | WS_GROUP,652,427,44,10
+    CONTROL         "Group 1",IDC_GROUP1,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,652,441,44,10
+    PUSHBUTTON      "Save",IDC_SAVEPARAMETER,726,432,50,14
+    GROUPBOX        "ISP",IDC_STATIC,639,281,178,132
+    CONTROL         "Auto Gain",IDC_AUTOGAIN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,645,293,52,10
+    CONTROL         "Auto Exposure",IDC_AUTOEXPOSURE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,646,306,68,10
+    CONTROL         "Slider1",IDC_GAIN,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,678,323,100,15
+    CONTROL         "Slider2",IDC_EXPOSURE,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,678,346,100,15
+    CONTROL         "Slider3",IDC_GAMMA,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,678,369,100,15
+    CONTROL         "Slider4",IDC_CONTRAST,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,678,392,100,15
+    LTEXT           "Gain",IDC_STATIC,645,327,17,8
+    LTEXT           "Exposure",IDC_STATIC,645,349,33,8
+    LTEXT           "Gamma",IDC_STATIC,643,374,21,8
+    LTEXT           "Contrast",IDC_STATIC,643,395,33,8
+    LTEXT           "0",IDC_GAINVALUE,783,328,21,8
+    LTEXT           "0",IDC_EXPOSUREVALUE,782,349,20,8
+    LTEXT           "0",IDC_GAMMAVALUE,781,371,23,8
+    LTEXT           "0",IDC_CONTRASTVALUE,781,395,21,8
+    PUSHBUTTON      "One Push WB",IDC_ONEPUSHWB,758,105,50,14
+    LTEXT           "Fps1",IDC_STATIC,21,438,17,8
+    LTEXT           "Fps2",IDC_STATIC,338,434,17,8
+    LTEXT           "0",IDC_Fps0,53,438,21,8
+    LTEXT           "0",IDC_Fps2,364,434,21,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404B0"
+        BEGIN
+            VALUE "FileDescription", "Demo Microsoft 基础类应用程序"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "Demo"
+            VALUE "LegalCopyright", "版权所有 (C) 2013"
+            VALUE "OriginalFilename", "Demo.EXE"
+            VALUE "ProductName", "Demo 应用程序"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_DEMO_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 830
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 467
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "关于 Demo(&A)..."
+END
+
+#endif    // 中文(简体，中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\Demo.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
