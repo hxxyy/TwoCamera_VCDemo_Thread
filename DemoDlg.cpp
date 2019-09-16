@@ -493,7 +493,7 @@ void CDemoDlg::OnSaveparameter()     //save image
 		char buffer[65];
 		_itoa(num_image, buffer, 10);
 		CameraSaveJpegB(0, strcat(buffer,".jpg"), 1);
-		num_image++;
+		num_image++; 
 	}
 		
 	//CameraSaveParameter(m_device_id,0);
