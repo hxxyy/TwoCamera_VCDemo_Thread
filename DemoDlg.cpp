@@ -4,8 +4,11 @@
 #include "stdafx.h"
 #include "Demo.h"
 #include "DemoDlg.h"
-#include "../../../SDK/JHCap.h"
-#include<process.h>
+#include "JHCap.h"
+#include <process.h>
+#include <time.h>
+#include <string>
+using namespace std;
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -17,7 +20,7 @@ static char THIS_FILE[] = __FILE__;
 #ifdef WIN64
 #pragma comment(lib,"../../../SDK64/JHCap2.lib")
 #else
-#pragma comment(lib,"../../../SDK/JHCap2.lib")
+#pragma comment(lib,"JHCap2.lib")
 #endif
 
 int work0 = 0;
@@ -132,7 +135,7 @@ CDemoDlg::CDemoDlg(CWnd* pParent /*=NULL*/)
 	m_index1=1;
 	m_totalFrame0=0;
 	m_totalFrame1=0;
-
+	num_image = 0;
 	//}}AFX_DATA_INIT
 	// Note that LoadIcon does not require a subsequent DestroyIcon in Win32
 	m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
@@ -472,13 +475,30 @@ void CDemoDlg::OnROIApply()  //set ROI
 		AfxMessageBox("please enter a valid number!");	
 }
 
-void CDemoDlg::OnSaveparameter()     //save parameter
+void CDemoDlg::OnSaveparameter()     //save image
 {
 	if (((CButton *)GetDlgItem(IDC_GROUP0))->GetCheck())
-		CameraSaveJpegB(0, "0.jpg", 1);
+	{
+		/*CameraSetGain(0, 10);
+		CameraSetExposure(0,100);
+		Sleep(5000);
+		CameraSaveJpegB(0, "res/0.jpg", 1);
+		CameraSetGain(0, 10);
+		CameraSetExposure(0, 2000);
+		Sleep(5000);
+		CameraSaveJpegB(0, "res/1.jpg", 1);		
+		CameraSetGain(0, 10);
+		CameraSetExposure(0, 3000);
+		Sleep(5000);*/
+		char buffer[65];
+		_itoa(num_image, buffer, 10);
+		CameraSaveJpegB(0, strcat(buffer,".jpg"), 1);
+		num_image++;
+	}
+		
 	//CameraSaveParameter(m_device_id,0);
 	else
-		CameraSaveJpegB(1, "1.jpg", 1);
+		CameraSaveJpegB(1, "xx.jpg", 1);
 		//CameraSaveParameter(m_device_id,1);
 }
 
@@ -498,6 +518,7 @@ void CDemoDlg::OnAutogain()         //set auto gain
 {
 	if(((CButton*)GetDlgItem(IDC_AUTOGAIN))->GetCheck())
 		CameraSetAGC(m_device_id,true);
+		 
 	else
 		CameraSetAGC(m_device_id,false);
 	updateParam();

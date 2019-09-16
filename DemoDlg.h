@@ -58,6 +58,7 @@ protected:
 	int m_index1;
 	int m_totalFrame0;
 	int m_totalFrame1;
+	int num_image;
 
 	// Generated message map functions
 	//{{AFX_MSG(CDemoDlg)
